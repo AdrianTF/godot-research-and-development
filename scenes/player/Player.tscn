@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://scenes/Player.gd" type="Script" id=2]
 [ext_resource path="res://assets/player/herochar_run_anim_strip_6.png" type="Texture" id=3]
@@ -7,6 +7,9 @@
 
 [sub_resource type="CircleShape2D" id=16]
 radius = 9.0
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 3.5, 6 )
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 4 )
@@ -88,13 +91,21 @@ script = ExtResource( 2 )
 wait_time = 0.15
 one_shot = true
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="PickupArea" type="Area2D" parent="."]
 collision_layer = 32768
 collision_mask = 32768
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea"]
 position = Vector2( 0, -7 )
 shape = SubResource( 16 )
+
+[node name="HazardArea" type="Area2D" parent="."]
+position = Vector2( 0, -6 )
+collision_layer = 16384
+collision_mask = 16384
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HazardArea"]
+shape = SubResource( 17 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -8 )
