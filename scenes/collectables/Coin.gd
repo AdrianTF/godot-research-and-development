@@ -2,6 +2,11 @@ extends Node2D
 
 func _ready():
 	$Area2D.connect("area_entered", self, "on_area_entered")
+	$AnimatedSprite.play("default")
 
 func on_area_entered(_area2d):
-	queue_free()
+	$AnimationPlayer.play("pickup")
+	call_deferred("disable_pickup")
+
+func disable_pickup():
+	$Area2D/CollisionShape2D.disabled = true
