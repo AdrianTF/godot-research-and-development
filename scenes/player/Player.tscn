@@ -85,6 +85,7 @@ animations = [ {
 extents = Vector2( 4, 7 )
 
 [node name="Player" type="KinematicBody2D" groups=["player"]]
+collision_layer = 0
 script = ExtResource( 2 )
 
 [node name="CoyoteTimer" type="Timer" parent="."]
