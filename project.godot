@@ -18,10 +18,10 @@ config/icon="res://icon.png"
 
 window/size/width=320
 window/size/height=180
-window/size/test_width=1700
+window/size/test_width=1760
 window/size/test_height=960
 window/stretch/mode="viewport"
-window/stretch/aspect="keep_width"
+window/stretch/aspect="keep_height"
 
 [gui]
 

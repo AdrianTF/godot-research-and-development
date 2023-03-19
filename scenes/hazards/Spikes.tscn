@@ -8,9 +8,10 @@ extents = Vector2( 7, 3 )
 [node name="Spikes" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 0, -4.20448 )
+position = Vector2( 0, -0.744093 )
 scale = Vector2( 1, 0.8 )
 texture = ExtResource( 1 )
+offset = Vector2( 0, -4 )
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( 0, -3 )
