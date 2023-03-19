@@ -1,7 +1,13 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://assets/enemy/slime_walk_anim_strip_15.png" type="Texture" id=1]
 [ext_resource path="res://scenes/enemies/Enemy.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 5, 6 )
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 5, 6 )
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 1 )
@@ -71,26 +77,12 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=17]
-extents = Vector2( 5, 6 )
-
-[sub_resource type="RectangleShape2D" id=18]
-extents = Vector2( 5, 6 )
+[sub_resource type="CircleShape2D" id=19]
+radius = 8.0
 
 [node name="Enemy" type="KinematicBody2D"]
 collision_layer = 0
 script = ExtResource( 2 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 0, -12 )
-frames = SubResource( 16 )
-animation = "run"
-frame = 2
-playing = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -6 )
-shape = SubResource( 17 )
 
 [node name="GoalDetector" type="Area2D" parent="."]
 position = Vector2( 0, -6 )
@@ -99,3 +91,22 @@ collision_mask = 8192
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GoalDetector"]
 shape = SubResource( 18 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -6 )
+shape = SubResource( 17 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -12 )
+frames = SubResource( 16 )
+animation = "run"
+frame = 4
+playing = true
+
+[node name="HazardArea" type="Area2D" parent="."]
+position = Vector2( 0, -7 )
+collision_layer = 16384
+collision_mask = 16384
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HazardArea"]
+shape = SubResource( 19 )
