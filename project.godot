@@ -83,6 +83,9 @@ attack={
 
 [layer_names]
 
+2d_physics/layer_1="TERRAIN"
+2d_physics/layer_2="ENEMY"
+2d_physics/layer_13="ENEMY_HAZARD"
 2d_physics/layer_14="ENEMY_GOAL"
 2d_physics/layer_15="HAZARD"
 2d_physics/layer_16="PICKUP"

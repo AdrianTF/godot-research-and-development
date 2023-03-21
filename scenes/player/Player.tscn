@@ -107,7 +107,7 @@ animations = [ {
 extents = Vector2( 4, 7 )
 
 [sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 5.5, 5.5 )
+extents = Vector2( 6.25, 5.5 )
 
 [node name="Player" type="KinematicBody2D" groups=["player"]]
 collision_layer = 0
@@ -127,8 +127,8 @@ shape = SubResource( 16 )
 
 [node name="HazardArea" type="Area2D" parent="."]
 position = Vector2( 0, -6 )
-collision_layer = 16384
-collision_mask = 16384
+collision_layer = 0
+collision_mask = 20480
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HazardArea"]
 shape = SubResource( 17 )
@@ -136,15 +136,17 @@ shape = SubResource( 17 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -8 )
 frames = SubResource( 15 )
-animation = "slash"
+animation = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -7 )
 shape = SubResource( 1 )
 
 [node name="AttackArea" type="Area2D" parent="."]
+position = Vector2( 10, -6 )
+collision_layer = 0
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
-position = Vector2( 9, -6 )
 shape = SubResource( 22 )
 disabled = true
