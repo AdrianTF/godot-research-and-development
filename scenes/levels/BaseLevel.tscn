@@ -1,11 +1,12 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://resources/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/GameCamera.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/levels/BaseLevel.gd" type="Script" id=4]
+[ext_resource path="res://scenes/win/Door.tscn" type="PackedScene" id=5]
 
-[node name="BaseLevel" type="Node"]
+[node name="BaseLevel" type="Node" groups=["base_level"]]
 script = ExtResource( 4 )
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -14,6 +15,8 @@ cell_size = Vector2( 16, 16 )
 format = 1
 
 [node name="GameCamera" parent="." instance=ExtResource( 2 )]
+
+[node name="Door" parent="." instance=ExtResource( 5 )]
 
 [node name="Enemies" type="Node2D" parent="."]
 

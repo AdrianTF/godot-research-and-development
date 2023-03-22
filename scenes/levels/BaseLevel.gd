@@ -3,6 +3,8 @@ extends Node
 var playerScene = preload("res://scenes/player/Player.tscn")
 var spawnPosition = Vector2.ZERO
 var currentPlayerNode = null
+var totalCoins = 0
+var collectedCoins = 0
 
 func _ready():
 	spawnPosition = $Player.global_position
