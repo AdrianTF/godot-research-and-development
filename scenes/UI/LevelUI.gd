@@ -8,4 +8,4 @@ func _ready():
 
 
 func on_coin_total_changed(totalCoins, collectedCoins):
-	$MarginContainer/CoinLabel.text = str(collectedCoins, "/", totalCoins)
+	$MarginContainer/HBoxContainer/CoinLabel.text = str(collectedCoins, "/", totalCoins)

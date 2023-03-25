@@ -103,7 +103,7 @@ shape = SubResource( 17 )
 position = Vector2( 0, -12 )
 frames = SubResource( 16 )
 animation = "run"
-frame = 10
+frame = 12
 playing = true
 
 [node name="HazardArea" type="Area2D" parent="."]

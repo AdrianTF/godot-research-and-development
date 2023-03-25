@@ -1,15 +1,13 @@
 extends KinematicBody2D
 
-enum Direction {RIGHT, LEFT}
-export(Direction) var startDirection
-
 var maxSpeed = 25
 var velocity = Vector2.ZERO
 var direction = Vector2.ZERO
 var gravity = 500
+var startDirection = Vector2.RIGHT
 
 func _ready():
-	direction = Vector2.RIGHT if startDirection == Direction.RIGHT else Vector2.LEFT
+	direction = startDirection
 	$GoalDetector.connect("area_entered", self, "on_goal_entered")
 	$HitboxArea.connect("area_entered", self, "on_hitbox_entered")
 func _process(delta):
