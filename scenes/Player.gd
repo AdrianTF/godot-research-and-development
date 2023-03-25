@@ -2,6 +2,8 @@ extends KinematicBody2D
 
 signal died
 
+var playerDeathScene = preload("res://scenes/player/PlayerDeath.tscn")
+
 enum State { NORMAL, DASHING, ATTACKING}
 
 var gravity = 1000
@@ -22,7 +24,6 @@ var isAttacking = false
 func _ready():
 	$HazardArea.connect("area_entered", self, "on_hazard_area_entered")
 	$AnimatedSprite.connect("animation_finished", self, "on_attack_animation_finished")
-	$AttackArea.connect("area_entered", self, "on_attack_area_entered")
 
 func _process(delta):
 	match currentState:
@@ -147,9 +148,15 @@ func update_animation():
 		$AnimatedSprite.flip_h = true if movementVector.x < 0 else false
 		get_node("AttackArea").set_scale(Vector2(-1,1) if movementVector.x < 0 else Vector2(1,1))
 
-func on_hazard_area_entered(_area2d):
-	$"/root/Helper".apply_camera_shake(1)
+func kill():
+	var playerDeathInstance = playerDeathScene.instance()
+	get_parent().add_child_below_node(self, playerDeathInstance)
+	playerDeathInstance.global_position = global_position
+	playerDeathInstance.velocity = velocity
 	emit_signal("died")
 
-func on_attack_area_entered(_area2d):
-	pass
+func on_hazard_area_entered(_area2d):
+	$"/root/Helper".apply_camera_shake(1)
+	call_deferred("kill")
+
+

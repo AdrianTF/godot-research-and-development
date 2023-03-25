@@ -27,4 +27,8 @@ format = 1
 
 [node name="Collectables" type="Node2D" parent="."]
 
-[node name="Player" parent="." instance=ExtResource( 3 )]
+[node name="Hazards" type="Node2D" parent="."]
+
+[node name="PlayerRoot" type="Node2D" parent="."]
+
+[node name="Player" parent="PlayerRoot" instance=ExtResource( 3 )]
