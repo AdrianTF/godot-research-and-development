@@ -50,6 +50,7 @@ func process_normal(delta):
 	if(moveVector.y < 0 && (is_on_floor() || !$CoyoteTimer.is_stopped() || hasDoubleJump)):
 		velocity.y = moveVector.y * jumpSpeed
 		if(!is_on_floor() && $CoyoteTimer.is_stopped()):
+			$"/root/Helper".apply_camera_shake(.75)
 			hasDoubleJump = false
 		$CoyoteTimer.stop()
 	
@@ -79,6 +80,7 @@ func process_normal(delta):
 
 func process_dash(delta):
 	if (isStateNew):
+		$"/root/Helper".apply_camera_shake(.75)
 		$AnimatedSprite.play("jump")
 		var moveVector = get_movement_vector()
 		var velocityMod = 1
@@ -146,6 +148,7 @@ func update_animation():
 		get_node("AttackArea").set_scale(Vector2(-1,1) if movementVector.x < 0 else Vector2(1,1))
 
 func on_hazard_area_entered(_area2d):
+	$"/root/Helper".apply_camera_shake(1)
 	emit_signal("died")
 
 func on_attack_area_entered(_area2d):
