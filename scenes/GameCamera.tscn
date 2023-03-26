@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/GameCamera.gd" type="Script" id=1]
 [ext_resource path="res://assets/parallax/bg_1.png" type="Texture" id=2]
 [ext_resource path="res://assets/parallax/bg_0.png" type="Texture" id=3]
 [ext_resource path="res://assets/parallax/bg_2.png" type="Texture" id=4]
+[ext_resource path="res://assets/parallax/fg_1.png" type="Texture" id=5]
+[ext_resource path="res://assets/parallax/fg_0.png" type="Texture" id=6]
 
 [sub_resource type="OpenSimplexNoise" id=1]
 seed = 72345
@@ -43,4 +45,24 @@ motion_mirroring = Vector2( 360, 0 )
 position = Vector2( 0, -100 )
 scale = Vector2( 1.5, 1.2 )
 texture = ExtResource( 4 )
+centered = false
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.4, 0 )
+motion_mirroring = Vector2( 360, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer5"]
+position = Vector2( 0, -100 )
+scale = Vector2( 1.5, 1.2 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.4, 0 )
+motion_mirroring = Vector2( 360, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2( 0, -100 )
+scale = Vector2( 1.5, 1.2 )
+texture = ExtResource( 5 )
 centered = false
