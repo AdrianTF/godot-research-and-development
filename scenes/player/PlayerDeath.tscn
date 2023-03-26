@@ -152,6 +152,7 @@ animations = [ {
 extents = Vector2( 4, 7 )
 
 [node name="PlayerDeath" type="KinematicBody2D"]
+collision_layer = 0
 script = ExtResource( 7 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]

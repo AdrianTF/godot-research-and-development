@@ -1,9 +1,21 @@
 extends KinematicBody2D
 
-var velocity = Vector2.ZERO
+var isFacingADirection = true
 
 func _process(delta):
-	velocity = move_and_slide(velocity, Vector2.UP)
+	var movementVector = get_movement_vector()
 	
-	if(is_on_floor()):
-		velocity.x = lerp(0, velocity.x, pow(2, -1 * delta))
+	if (movementVector.x != 0):
+		if(isFacingADirection):
+			$AnimatedSprite.flip_h = true if movementVector.x < 0 else false
+			isFacingADirection = false
+		
+	$AnimatedSprite.play("death")
+	yield($AnimatedSprite, "animation_finished")
+	queue_free()
+
+func get_movement_vector():
+	var moveVector = Vector2.ZERO
+	moveVector.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
+	moveVector.y = -1 if Input.is_action_just_pressed("jump") else 0
+	return moveVector

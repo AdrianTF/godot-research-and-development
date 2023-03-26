@@ -19,6 +19,7 @@ var hasDash = false
 var currentState = State.NORMAL
 var isStateNew = true
 var isAttacking = false
+var isDying = false
 
 
 func _ready():
@@ -149,10 +150,12 @@ func update_animation():
 		get_node("AttackArea").set_scale(Vector2(-1,1) if movementVector.x < 0 else Vector2(1,1))
 
 func kill():
+	if (isDying):
+		return
+	isDying = true
 	var playerDeathInstance = playerDeathScene.instance()
 	get_parent().add_child_below_node(self, playerDeathInstance)
 	playerDeathInstance.global_position = global_position
-	playerDeathInstance.velocity = velocity
 	emit_signal("died")
 
 func on_hazard_area_entered(_area2d):

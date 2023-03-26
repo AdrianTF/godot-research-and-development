@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/levels/BaseLevel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/collectables/Coin.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/enemies/EnemySpawner.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/enemies/EnemyGoal.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/hazards/Spikes.tscn" type="PackedScene" id=5]
 
 [node name="Level_01" instance=ExtResource( 1 )]
 
@@ -24,10 +25,14 @@ position = Vector2( -44.3573, 0.420448 )
 position = Vector2( 123.612, -12 )
 
 [node name="Coin" parent="Collectables" index="0" instance=ExtResource( 2 )]
-position = Vector2( 47.5106, -7.35784 )
+position = Vector2( 48, -8 )
 
 [node name="Coin2" parent="Collectables" index="1" instance=ExtResource( 2 )]
-position = Vector2( 62.0161, -7.35784 )
+position = Vector2( 64, -8 )
 
 [node name="Coin3" parent="Collectables" index="2" instance=ExtResource( 2 )]
-position = Vector2( 75.6806, -7.77829 )
+position = Vector2( 80, -8 )
+
+[node name="Spikes" parent="Hazards" index="0" instance=ExtResource( 5 )]
+position = Vector2( 224, -168 )
+rotation = 1.57079
