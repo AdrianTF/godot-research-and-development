@@ -138,5 +138,5 @@ shape = SubResource( 17 )
 position = Vector2( 0, -8 )
 frames = SubResource( 16 )
 animation = "death"
-frame = 4
+frame = 1
 playing = true

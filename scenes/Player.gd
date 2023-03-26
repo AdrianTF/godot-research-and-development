@@ -41,6 +41,9 @@ func change_state(newState):
 	isStateNew = true
 
 func process_normal(delta):
+	if(isStateNew):
+		$DashParticles.emitting = false
+	
 	var moveVector = get_movement_vector()
 	
 	velocity.x +=moveVector.x * horizontalAcceleration * delta
@@ -82,6 +85,7 @@ func process_normal(delta):
 
 func process_dash(delta):
 	if (isStateNew):
+		$DashParticles.emitting = true
 		$"/root/Helper".apply_camera_shake(.75)
 		$AnimatedSprite.play("jump")
 		var moveVector = get_movement_vector()
@@ -101,6 +105,7 @@ func process_dash(delta):
 
 func process_attack(delta):
 	if(isStateNew):
+		$DashParticles.emitting = false
 		$AnimatedSprite.play("slash")
 		isAttacking = true
 		$AttackArea/CollisionShape2D.disabled = false
