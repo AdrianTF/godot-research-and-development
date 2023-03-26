@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var isFacingADirection = true
 
-func _process(delta):
+func _process(_delta):
 	var movementVector = get_movement_vector()
 	
 	if (movementVector.x != 0):
