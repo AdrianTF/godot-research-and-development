@@ -114,7 +114,6 @@ func process_attack(delta):
 		$AnimatedSprite.play("slash")
 		isAttacking = true
 		$AttackArea/CollisionShape2D.disabled = false
-		print("attack")
 	
 	if(!isStateNew && !isAttacking):
 		call_deferred("change_state", State.NORMAL)

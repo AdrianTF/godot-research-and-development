@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/tiles/vase.png" type="Texture" id=1]
+
+[node name="Vase" type="Node2D"]
+position = Vector2( 0, -8 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
