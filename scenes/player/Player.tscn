@@ -16,7 +16,7 @@ uniform vec4 baseColor : hint_color;
 
 void fragment() {
 	vec4 texColor = texture(TEXTURE, UV);
-	COLOR.rgba = vec4(baseColor.r, baseColor.g, baseColor.b, texColor.a * 0.2);
+	COLOR.rgba = vec4(baseColor.r, baseColor.g, baseColor.b, texColor.a * 0.3);
 }"
 
 [sub_resource type="ShaderMaterial" id=36]
@@ -24,7 +24,7 @@ shader = SubResource( 35 )
 shader_param/baseColor = Color( 0.282353, 0.384314, 0.533333, 1 )
 
 [sub_resource type="Curve" id=37]
-_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.12973, 0.997727 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.454054, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
 
 [sub_resource type="CurveTexture" id=38]
 curve = SubResource( 37 )

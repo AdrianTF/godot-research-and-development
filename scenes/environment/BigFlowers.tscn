@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/tiles/bigflowers_props.png" type="Texture" id=1]
+
+[node name="BigFlowers" type="Node2D"]
+position = Vector2( 0, -4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
