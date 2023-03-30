@@ -1,13 +1,14 @@
 [gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://assets/player/herochar_sword_attack_anim_strip_4.png" type="Texture" id=1]
-[ext_resource path="res://scenes/Player.gd" type="Script" id=2]
+[ext_resource path="res://scenes/player/Player.gd" type="Script" id=2]
 [ext_resource path="res://assets/player/herochar_run_anim_strip_6.png" type="Texture" id=3]
 [ext_resource path="res://assets/player/herochar_idle_anim_strip_4.png" type="Texture" id=4]
 [ext_resource path="res://assets/player/herochar_jump_up_anim_strip_3.png" type="Texture" id=5]
 [ext_resource path="res://assets/player/herochar_death_anim_strip_8.png" type="Texture" id=6]
 [ext_resource path="res://assets/player/herochar_hit_anim_strip_3.png" type="Texture" id=7]
 [ext_resource path="res://assets/player/herochar_idle_single.png" type="Texture" id=8]
+
 
 [sub_resource type="Shader" id=35]
 code = "shader_type canvas_item;

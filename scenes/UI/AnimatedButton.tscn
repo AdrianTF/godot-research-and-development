@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://resources/theme.tres" type="Theme" id=1]
+[ext_resource path="res://scenes/UI/AnimatedButton.gd" type="Script" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "hover"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_min_size")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 105, 22 ), Vector2( 122, 22 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_size")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 105, 22 ), Vector2( 122, 22 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "click"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 5.0, -3.0, 0.0 ]
+}
+
+[node name="AnimatedButton" type="Button"]
+margin_right = 105.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 105, 22 )
+rect_pivot_offset = Vector2( 52, 11 )
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource( 1 )
+text = "Texto de prueba"
+script = ExtResource( 2 )
+
+[node name="HoverAnimationPlayer" type="AnimationPlayer" parent="."]
+anims/hover = SubResource( 1 )
+
+[node name="ClickAnimationPlayer" type="AnimationPlayer" parent="."]
+anims/click = SubResource( 3 )
