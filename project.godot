@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Proyecto final"
-run/main_scene="res://scenes/Main.tscn"
+run/main_scene="res://scenes/UI/MainMenu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -23,8 +23,8 @@ Helper="*res://scripts/helper.gd"
 
 window/size/width=320
 window/size/height=180
-window/size/test_width=1280
-window/size/test_height=720
+window/size/test_width=1440
+window/size/test_height=810
 window/stretch/mode="2d"
 window/stretch/aspect="keep_height"
 

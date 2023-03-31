@@ -9,7 +9,6 @@
 [ext_resource path="res://assets/player/herochar_hit_anim_strip_3.png" type="Texture" id=7]
 [ext_resource path="res://assets/player/herochar_idle_single.png" type="Texture" id=8]
 
-
 [sub_resource type="Shader" id=35]
 code = "shader_type canvas_item;
 
