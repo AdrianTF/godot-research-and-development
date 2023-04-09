@@ -18,6 +18,7 @@ config/icon="res://icon.png"
 
 LevelManager="*res://scenes/levels/LevelManager.tscn"
 Helper="*res://scripts/helper.gd"
+ScreenTransitionManager="*res://scenes/UI/ScreenTransitionManager.tscn"
 
 [display]
 
@@ -27,6 +28,10 @@ window/size/test_width=1440
 window/size/test_height=810
 window/stretch/mode="2d"
 window/stretch/aspect="keep_height"
+
+[global]
+
+boot=false
 
 [gui]
 
@@ -83,6 +88,11 @@ dash={
 attack={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":69,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+up={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
  ]
 }
 

@@ -37,7 +37,6 @@ func create_player():
 
 func on_player_died():
 	currentPlayerNode.queue_free()
-	
 	var timer = get_tree().create_timer(1)
 	yield(timer, "timeout")
 	create_player()
