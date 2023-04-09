@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://resources/theme.tres" type="Theme" id=1]
 [ext_resource path="res://scenes/UI/AnimatedButton.tscn" type="PackedScene" id=2]
@@ -6,8 +6,28 @@
 [ext_resource path="res://scenes/UI/GameComplete.gd" type="Script" id=4]
 [ext_resource path="res://scenes/UI/MenuBackground.tscn" type="PackedScene" id=5]
 
+[sub_resource type="Animation" id=1]
+resource_name = "default"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("MarginContainer/PanelContainer:rect_scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 1.1, 1.1 ), Vector2( 0.9, 0.9 ), Vector2( 1, 1 ) ]
+}
+
 [node name="GameComplete" type="CanvasLayer"]
 script = ExtResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "default"
+anims/default = SubResource( 1 )
 
 [node name="MenuBackground" parent="." instance=ExtResource( 5 )]
 
@@ -21,6 +41,7 @@ margin_left = 91.0
 margin_top = 49.0
 margin_right = 229.0
 margin_bottom = 131.0
+rect_pivot_offset = Vector2( 69, 41 )
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
