@@ -33,10 +33,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
-margin_left = 91.0
-margin_top = 32.0
-margin_right = 229.0
-margin_bottom = 148.0
+margin_left = 123.0
+margin_top = 50.0
+margin_right = 261.0
+margin_bottom = 166.0
 rect_pivot_offset = Vector2( 69, 58 )
 size_flags_horizontal = 4
 size_flags_vertical = 4
