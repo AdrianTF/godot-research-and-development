@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scenes/levels/BaseLevel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/collectables/Coin.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://scenes/environment/Flowers.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/environment/BigFlowers.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/environment/Grass.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/environment/TutorialSign.tscn" type="PackedScene" id=13]
 
 [node name="Level_01" instance=ExtResource( 1 )]
 
@@ -59,7 +60,11 @@ position = Vector2( -180.793, 0 )
 [node name="EnemyGoal2" parent="Enemies" index="2" instance=ExtResource( 4 )]
 position = Vector2( -44.3573, 0.420448 )
 
-[node name="Door" parent="." index="8"]
+[node name="TutorialSign" parent="." index="8" instance=ExtResource( 13 )]
+position = Vector2( 200, -64 )
+text = "Usa WASD o las flechas para moverte"
+
+[node name="Door" parent="." index="9"]
 position = Vector2( 123.612, -12 )
 
 [node name="Coin" parent="Collectables" index="0" instance=ExtResource( 2 )]
