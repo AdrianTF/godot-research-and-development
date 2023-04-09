@@ -10,6 +10,8 @@ func change_level(levelIndex):
 	else:
 		$"/root/ScreenTransitionManager".transition_to_scene(levelScenes[currentLevelIndex].resource_path)
 
-
 func increment_level():
 	change_level(currentLevelIndex + 1)
+
+func restart_level():
+		change_level(currentLevelIndex)
