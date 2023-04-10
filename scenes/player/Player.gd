@@ -90,6 +90,7 @@ func process_normal(delta):
 
 func process_dash(delta):
 	if (isStateNew):
+		$DashAudioPlayer.play()
 		$DashParticles.emitting = true
 		$"/root/Helper".apply_camera_shake(.75)
 		$AnimatedSprite.play("jump")
@@ -110,6 +111,7 @@ func process_dash(delta):
 
 func process_attack(delta):
 	if(isStateNew):
+		$AttackAudioPlayer.play()
 		$DashParticles.emitting = false
 		$AnimatedSprite.play("slash")
 		isAttacking = true

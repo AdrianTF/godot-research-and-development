@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=2]
+[gd_scene load_steps=60 format=2]
 
 [ext_resource path="res://assets/player/herochar_sword_attack_anim_strip_4.png" type="Texture" id=1]
 [ext_resource path="res://scenes/player/Player.gd" type="Script" id=2]
@@ -19,6 +19,8 @@
 [ext_resource path="res://assets/sounds/footstep_concrete_001.ogg" type="AudioStream" id=17]
 [ext_resource path="res://assets/sounds/footstep_concrete_004.ogg" type="AudioStream" id=18]
 [ext_resource path="res://assets/sounds/footstep_concrete_002.ogg" type="AudioStream" id=19]
+[ext_resource path="res://assets/sounds/Action Misc 8.wav" type="AudioStream" id=20]
+[ext_resource path="res://assets/sounds/Sword 2.wav" type="AudioStream" id=21]
 
 [sub_resource type="Shader" id=35]
 code = "shader_type canvas_item;
@@ -255,6 +257,29 @@ bus = "Footstep"
 stream = ExtResource( 18 )
 volume_db = -12.0
 bus = "Footstep"
+
+[node name="DashAudioPlayer" parent="." instance=ExtResource( 9 )]
+minPitchScale = 0.8
+maxPitchScale = 1.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DashAudioPlayer"]
+stream = ExtResource( 20 )
+volume_db = -5.0
+bus = "PlayerDash"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="DashAudioPlayer"]
+stream = ExtResource( 20 )
+volume_db = -5.0
+bus = "PlayerDash"
+
+[node name="AttackAudioPlayer" parent="." instance=ExtResource( 9 )]
+minPitchScale = 0.6
+maxPitchScale = 0.8
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AttackAudioPlayer"]
+stream = ExtResource( 21 )
+volume_db = -20.0
+bus = "PlayerSlash"
 
 [node name="CoyoteTimer" type="Timer" parent="."]
 wait_time = 0.15
