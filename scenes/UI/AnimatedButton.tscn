@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://resources/theme.tres" type="Theme" id=1]
 [ext_resource path="res://scenes/UI/AnimatedButton.gd" type="Script" id=2]
+[ext_resource path="res://assets/sounds/click_002.ogg" type="AudioStream" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "hover"
@@ -63,3 +64,8 @@ anims/hover = SubResource( 1 )
 
 [node name="ClickAnimationPlayer" type="AnimationPlayer" parent="."]
 anims/click = SubResource( 3 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -5.0
+bus = "SFX"

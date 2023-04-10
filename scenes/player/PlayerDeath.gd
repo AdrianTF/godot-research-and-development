@@ -2,6 +2,9 @@ extends KinematicBody2D
 
 var isFacingADirection = true
 
+func _ready():
+	$DeathSoundPlayer.play()
+
 func _process(_delta):
 	var movementVector = get_movement_vector()
 	
