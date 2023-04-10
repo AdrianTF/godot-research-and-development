@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://assets/player/herochar_sword_attack_anim_strip_4.png" type="Texture" id=1]
 [ext_resource path="res://scenes/player/Player.gd" type="Script" id=2]
@@ -8,6 +8,17 @@
 [ext_resource path="res://assets/player/herochar_death_anim_strip_8.png" type="Texture" id=6]
 [ext_resource path="res://assets/player/herochar_hit_anim_strip_3.png" type="Texture" id=7]
 [ext_resource path="res://assets/player/herochar_idle_single.png" type="Texture" id=8]
+[ext_resource path="res://scenes/util/RandomAudioStreamPlayer.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/sounds/footstep_grass_000.ogg" type="AudioStream" id=10]
+[ext_resource path="res://assets/sounds/footstep_grass_001.ogg" type="AudioStream" id=11]
+[ext_resource path="res://assets/sounds/footstep_grass_002.ogg" type="AudioStream" id=12]
+[ext_resource path="res://assets/sounds/footstep_grass_003.ogg" type="AudioStream" id=13]
+[ext_resource path="res://assets/sounds/footstep_grass_004.ogg" type="AudioStream" id=14]
+[ext_resource path="res://assets/sounds/footstep_concrete_003.ogg" type="AudioStream" id=15]
+[ext_resource path="res://assets/sounds/footstep_concrete_000.ogg" type="AudioStream" id=16]
+[ext_resource path="res://assets/sounds/footstep_concrete_001.ogg" type="AudioStream" id=17]
+[ext_resource path="res://assets/sounds/footstep_concrete_004.ogg" type="AudioStream" id=18]
+[ext_resource path="res://assets/sounds/footstep_concrete_002.ogg" type="AudioStream" id=19]
 
 [sub_resource type="Shader" id=35]
 code = "shader_type canvas_item;
@@ -191,6 +202,39 @@ extents = Vector2( 6.25, 5.5 )
 [node name="Player" type="KinematicBody2D" groups=["player"]]
 collision_layer = 0
 script = ExtResource( 2 )
+
+[node name="FootstepAudioPlayer" parent="." instance=ExtResource( 9 )]
+numberToPlay = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="FootstepAudioPlayer"]
+stream = ExtResource( 10 )
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="FootstepAudioPlayer"]
+stream = ExtResource( 11 )
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="FootstepAudioPlayer"]
+stream = ExtResource( 12 )
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="FootstepAudioPlayer"]
+stream = ExtResource( 13 )
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="FootstepAudioPlayer"]
+stream = ExtResource( 14 )
+
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="FootstepAudioPlayer"]
+stream = ExtResource( 16 )
+
+[node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="FootstepAudioPlayer"]
+stream = ExtResource( 17 )
+
+[node name="AudioStreamPlayer8" type="AudioStreamPlayer" parent="FootstepAudioPlayer"]
+stream = ExtResource( 19 )
+
+[node name="AudioStreamPlayer9" type="AudioStreamPlayer" parent="FootstepAudioPlayer"]
+stream = ExtResource( 15 )
+
+[node name="AudioStreamPlayer10" type="AudioStreamPlayer" parent="FootstepAudioPlayer"]
+stream = ExtResource( 18 )
 
 [node name="CoyoteTimer" type="Timer" parent="."]
 wait_time = 0.15

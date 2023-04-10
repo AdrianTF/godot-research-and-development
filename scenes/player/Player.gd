@@ -174,6 +174,7 @@ func create_footsteps(scale = 1):
 	var position = global_position
 	position.y += 8
 	footstep.global_position = position
+	$FootstepAudioPlayer.play()
 
 func on_hazard_area_entered(_area2d):
 	$"/root/Helper".apply_camera_shake(1)
