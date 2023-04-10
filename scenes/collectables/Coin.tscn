@@ -1,8 +1,10 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://assets/coin/coin_anim_strip_6.png" type="Texture" id=1]
 [ext_resource path="res://scenes/collectables/Coin.gd" type="Script" id=2]
 [ext_resource path="res://assets/coin/coin_pickup_anim_strip_6.png" type="Texture" id=3]
+[ext_resource path="res://scenes/util/RandomAudioStreamPlayer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/sounds/Coin 2.wav" type="AudioStream" id=5]
 
 [sub_resource type="Animation" id=15]
 resource_name = "pickup"
@@ -113,6 +115,15 @@ animations = [ {
 [node name="Coin" type="Node2D" groups=["coin"]]
 script = ExtResource( 2 )
 
+[node name="RandomAudioStreamPlayer" parent="." instance=ExtResource( 4 )]
+minPitchScale = 0.8
+maxPitchScale = 1.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="RandomAudioStreamPlayer"]
+stream = ExtResource( 5 )
+volume_db = -15.0
+bus = "SFX"
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/pickup = SubResource( 15 )
 
@@ -125,5 +136,5 @@ shape = SubResource( 8 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 7 )
-frame = 5
+frame = 1
 playing = true
