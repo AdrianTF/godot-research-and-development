@@ -70,6 +70,7 @@ margin_left = 8.0
 margin_top = 28.0
 margin_right = 113.0
 margin_bottom = 50.0
+disabled = true
 text = "Continuar"
 
 [node name="OptionsButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource( 2 )]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/UI/AnimatedButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://resources/theme.tres" type="Theme" id=2]
 [ext_resource path="res://scenes/UI/OptionsMenu.gd" type="Script" id=3]
+[ext_resource path="res://scenes/util/RangeControl.tscn" type="PackedScene" id=4]
 
 [sub_resource type="Animation" id=1]
 resource_name = "default"
@@ -33,17 +34,17 @@ anchor_bottom = 1.0
 theme = ExtResource( 2 )
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
-margin_left = 27.0
-margin_top = 40.0
-margin_right = 293.0
-margin_bottom = 140.0
+margin_left = 66.0
+margin_top = 24.0
+margin_right = 317.0
+margin_bottom = 192.0
 rect_pivot_offset = Vector2( 133, 50 )
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer"]
-margin_right = 266.0
-margin_bottom = 100.0
+margin_right = 251.0
+margin_bottom = 168.0
 custom_constants/margin_right = 8
 custom_constants/margin_top = 8
 custom_constants/margin_left = 8
@@ -52,20 +53,20 @@ custom_constants/margin_bottom = 8
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer"]
 margin_left = 8.0
 margin_top = 8.0
-margin_right = 258.0
-margin_bottom = 92.0
-rect_min_size = Vector2( 250, 0 )
+margin_right = 243.0
+margin_bottom = 160.0
+rect_min_size = Vector2( 235, 0 )
 custom_constants/separation = 12
 
 [node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
-margin_right = 250.0
+margin_right = 235.0
 margin_bottom = 16.0
 text = "OPCIONES"
 align = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 margin_top = 28.0
-margin_right = 250.0
+margin_right = 235.0
 margin_bottom = 50.0
 
 [node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
@@ -75,15 +76,45 @@ margin_bottom = 19.0
 text = "Modo de ventana"
 
 [node name="WindowModeButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 1 )]
-margin_left = 126.0
-margin_right = 231.0
+margin_left = 118.0
+margin_right = 223.0
 size_flags_horizontal = 6
 text = "VENTANA"
 icon_align = 1
 
-[node name="BackButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource( 1 )]
-margin_left = 72.0
+[node name="MusicVolumeContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 margin_top = 62.0
-margin_right = 177.0
+margin_right = 235.0
 margin_bottom = 84.0
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MusicVolumeContainer"]
+margin_top = 3.0
+margin_right = 99.0
+margin_bottom = 19.0
+text = "Musica            "
+
+[node name="RangeControl" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MusicVolumeContainer" instance=ExtResource( 4 )]
+margin_left = 133.0
+margin_right = 205.0
+
+[node name="SFXVolumeContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+margin_top = 96.0
+margin_right = 235.0
+margin_bottom = 118.0
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/SFXVolumeContainer"]
+margin_top = 3.0
+margin_right = 97.0
+margin_bottom = 19.0
+text = "SFX               "
+
+[node name="RangeControl" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/SFXVolumeContainer" instance=ExtResource( 4 )]
+margin_left = 132.0
+margin_right = 204.0
+
+[node name="BackButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_left = 65.0
+margin_top = 130.0
+margin_right = 170.0
+margin_bottom = 152.0
 text = "Volver"
