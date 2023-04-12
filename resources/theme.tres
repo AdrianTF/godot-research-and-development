@@ -1,8 +1,17 @@
-[gd_resource type="Theme" load_steps=9 format=2]
+[gd_resource type="Theme" load_steps=10 format=2]
 
 [ext_resource path="res://resources/font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/ui/Button_normal.png" type="Texture" id=2]
 [ext_resource path="res://assets/ui/Button_hover.png" type="Texture" id=3]
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 29, 10 )
+margin_left = 2.0
+margin_right = 2.0
+margin_top = 2.0
+margin_bottom = 2.0
+modulate_color = Color( 0.333333, 0.333333, 0.333333, 1 )
 
 [sub_resource type="StyleBoxEmpty" id=4]
 
@@ -43,6 +52,7 @@ shadow_size = 1
 default_font = ExtResource( 1 )
 Button/colors/font_color = Color( 0.741176, 0.643137, 0.52549, 0.976471 )
 Button/colors/font_color_pressed = Color( 0.482353, 0.431373, 0.372549, 1 )
+Button/styles/disabled = SubResource( 6 )
 Button/styles/focus = SubResource( 4 )
 Button/styles/hover = SubResource( 2 )
 Button/styles/normal = SubResource( 1 )

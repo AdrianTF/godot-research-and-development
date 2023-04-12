@@ -8,6 +8,10 @@ func _ready():
 	$SubtractButton.connect("pressed", self, "on_button_pressed",[-.1])
 	$AddButton.connect("pressed", self, "on_button_pressed",[.1])
 
-func on_button_pressed(change):
-	currentPercentage = clamp(currentPercentage + change, 0, 1)
+func set_current_percentage(percent):
+	currentPercentage = clamp(percent, 0, 1)
+	$Label.text = str(currentPercentage * 10)
 	emit_signal("percentage_changed", currentPercentage)
+
+func on_button_pressed(change):
+	set_current_percentage(currentPercentage + change)

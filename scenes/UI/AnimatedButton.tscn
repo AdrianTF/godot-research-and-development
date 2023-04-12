@@ -48,7 +48,7 @@ tracks/0/keys = {
 "values": [ 0.0, 5.0, -3.0, 0.0 ]
 }
 
-[node name="AnimatedButton" type="Button"]
+[node name="AnimatedButton" type="Button" groups=["animated_button"]]
 margin_right = 105.0
 margin_bottom = 22.0
 rect_min_size = Vector2( 105, 22 )

@@ -38,7 +38,7 @@ margin_left = 66.0
 margin_top = 24.0
 margin_right = 317.0
 margin_bottom = 192.0
-rect_pivot_offset = Vector2( 133, 50 )
+rect_pivot_offset = Vector2( 125, 84 )
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
