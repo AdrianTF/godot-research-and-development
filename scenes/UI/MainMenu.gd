@@ -20,7 +20,7 @@ func _ready():
 
 func on_play_pressed():
 	$"/root/SaveFile".save(0)
-	$"/root/LevelManager".change_level(0)
+	$"/root/LevelManager".change_level(2)
 
 func on_quit_pressed():
 	get_tree().quit()

@@ -583,6 +583,11 @@ tile_set = ExtResource( 8 )
 cell_size = Vector2( 16, 16 )
 format = 1
 
+[node name="DecorativeTileMapLayer" type="TileMap" parent="."]
+tile_set = ExtResource( 8 )
+cell_size = Vector2( 16, 16 )
+format = 1
+
 [node name="TextTileMap" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
 cell_size = Vector2( 7, 7 )
@@ -604,6 +609,8 @@ format = 1
 [node name="Collectables" type="Node2D" parent="."]
 
 [node name="Hazards" type="Node2D" parent="."]
+
+[node name="Tutorials" type="Node2D" parent="."]
 
 [node name="PlayerRoot" type="Node2D" parent="."]
 
