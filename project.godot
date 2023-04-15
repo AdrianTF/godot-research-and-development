@@ -21,6 +21,7 @@ Helper="*res://scripts/helper.gd"
 ScreenTransitionManager="*res://scenes/UI/ScreenTransitionManager.tscn"
 MouseCursor="*res://scenes/UI/MouseCursor.tscn"
 MusicPlayer="*res://scenes/util/MusicPlayer.tscn"
+SaveFile="*res://scripts/save_file.gd"
 
 [display]
 
