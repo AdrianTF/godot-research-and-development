@@ -35,7 +35,7 @@ resonance = 0.25
 resource_name = "Compressor"
 
 [resource]
-bus/0/volume_db = -25.7676
+bus/0/volume_db = -7.26851
 bus/1/name = "Music"
 bus/1/solo = false
 bus/1/mute = false

@@ -775,7 +775,7 @@ rotation = 1.57079
 
 [node name="TutorialSign" parent="Tutorials" index="0" instance=ExtResource( 6 )]
 position = Vector2( 584, 160 )
-text = "Esquiva a los enemigos para que no de ataquen."
+text = "Esquiva a los enemigos para que no te ataquen."
 
 [node name="TutorialSign2" parent="Tutorials" index="1" instance=ExtResource( 6 )]
 position = Vector2( 984, 128 )

@@ -131,19 +131,6 @@ position = Vector2( 1728, 200 )
 [node name="Coin14" parent="Collectables" index="16" instance=ExtResource( 2 )]
 position = Vector2( 1856, 200 )
 
-[node name="TutorialSign" parent="Tutorials" index="0" instance=ExtResource( 13 )]
-position = Vector2( -48, 64 )
-text = "Bienvenido a Final Quest.
-Utiliza WASD para moverte."
-
-[node name="TutorialSign2" parent="Tutorials" index="1" instance=ExtResource( 13 )]
-position = Vector2( 56, 64 )
-text = "Pulsa ESPACIO para saltar."
-
-[node name="TutorialSign3" parent="Tutorials" index="2" instance=ExtResource( 13 )]
-position = Vector2( 336, 0 )
-text = "Manten pulsado ESPACIO para saltar mas lejos."
-
 [node name="Spikes" parent="Hazards" index="0" instance=ExtResource( 5 )]
 position = Vector2( 360, 64 )
 
@@ -155,6 +142,19 @@ position = Vector2( 392, 64 )
 
 [node name="Spikes4" parent="Hazards" index="3" instance=ExtResource( 5 )]
 position = Vector2( 408, 64 )
+
+[node name="TutorialSign" parent="Tutorials" index="0" instance=ExtResource( 13 )]
+position = Vector2( -48, 64 )
+text = "Bienvenido a Final Quest.
+Utiliza A y D para moverte."
+
+[node name="TutorialSign2" parent="Tutorials" index="1" instance=ExtResource( 13 )]
+position = Vector2( 56, 64 )
+text = "Pulsa ESPACIO para saltar."
+
+[node name="TutorialSign3" parent="Tutorials" index="2" instance=ExtResource( 13 )]
+position = Vector2( 336, 0 )
+text = "Manten pulsado ESPACIO para saltar mas lejos."
 
 [node name="PlayerRoot" parent="." index="13"]
 position = Vector2( -64, 64 )
