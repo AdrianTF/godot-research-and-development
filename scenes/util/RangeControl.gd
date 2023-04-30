@@ -10,7 +10,11 @@ func _ready():
 
 func set_current_percentage(percent):
 	currentPercentage = clamp(percent, 0, 1)
-	$Label.text = str(currentPercentage * 10)
+	
+	var labelNumber = currentPercentage * 10
+	labelNumber = round(labelNumber)
+	
+	$Label.text = str(labelNumber)
 	emit_signal("percentage_changed", currentPercentage)
 
 func on_button_pressed(change):

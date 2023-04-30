@@ -29,15 +29,13 @@ func _process(delta):
 func on_goal_entered(_area2d):
 	direction *= -1
 
-
 func kill():
 	var enemyDeathInstance = enemyDeathScene.instance()
 	get_parent().add_child_below_node(self, enemyDeathInstance)
 	enemyDeathInstance.global_position = global_position
 	enemyDeathInstance.direction = direction
 
-
 func on_hitbox_entered(_area2d):
 	$"/root/Helper".apply_camera_shake(1)
-	kill()	
+	kill()
 	queue_free()

@@ -1,6 +1,5 @@
 extends Button
 
-
 export(bool) var disabledHoverAnimation
 
 func _ready():

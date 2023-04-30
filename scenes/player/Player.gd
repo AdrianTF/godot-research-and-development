@@ -48,7 +48,7 @@ func process_normal(delta):
 	
 	var moveVector = get_movement_vector()
 	
-	velocity.x +=moveVector.x * horizontalAcceleration * delta
+	velocity.x += moveVector.x * horizontalAcceleration * delta
 	if (moveVector.x == 0):
 		velocity.x = lerp(0, velocity.x, pow(2, -50 * delta))
 	

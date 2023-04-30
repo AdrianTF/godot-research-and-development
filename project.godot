@@ -10,7 +10,7 @@ config_version=4
 
 [application]
 
-config/name="Proyecto final"
+config/name="Final Quest"
 run/main_scene="res://scenes/UI/MainMenu.tscn"
 config/icon="res://icon.png"
 
