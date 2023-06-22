@@ -11,7 +11,7 @@ Final Quest is a unique project that combines a captivating 2D platformer with a
 
 ## Getting started
 #### Installation
-1. Clone the repository (```git clone https://github.com/AdrianTF/Proyecto-final```)
+1. Clone the repository (```git clone https://github.com/AdrianTF/godot-research-and-development```)
 2. Open the project in Godot Engine.
 3. Explore the source code and assets in the project directory.
 
