@@ -16,7 +16,7 @@ Final Quest is a unique project that combines a captivating 2D platformer with a
 3. Explore the source code and assets in the project directory.
 
 #### Documentation and executable
-You can download the full project documentation from [here](https://anvilproject.org/guides/content/creating-links).
+You can download the full project documentation from [here](hhttps://mega.nz/folder/ZhVWHIYB#iAxR6V3NEJaLH9M02EhKUg).
 
 You can also find the game executable and documentation on my [itch.io](https://less96.itch.io/final-quest-godot) page.
 ## Usage
