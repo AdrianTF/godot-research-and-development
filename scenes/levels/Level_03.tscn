@@ -1224,7 +1224,7 @@ position = Vector2( -2088, 32 )
 
 [node name="TutorialSign" parent="Tutorials" index="0" instance=ExtResource( 8 )]
 position = Vector2( 52, 304 )
-text = "Puedes pulsar ESPACIO en el aire para realizar un salto doble."
+text = "You can press SPACEBAR while mid air to double jump."
 
 [node name="PlayerRoot" parent="." index="13"]
 position = Vector2( -128, 336 )

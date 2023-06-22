@@ -61,7 +61,7 @@ custom_constants/separation = 12
 [node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 margin_right = 235.0
 margin_bottom = 16.0
-text = "OPCIONES"
+text = "OPTIONS"
 align = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
@@ -71,15 +71,15 @@ margin_bottom = 50.0
 
 [node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 margin_top = 3.0
-margin_right = 103.0
+margin_right = 100.0
 margin_bottom = 19.0
-text = "Modo de ventana"
+text = "Window Mode    "
 
 [node name="WindowModeButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 1 )]
-margin_left = 118.0
-margin_right = 223.0
+margin_left = 117.0
+margin_right = 222.0
 size_flags_horizontal = 6
-text = "VENTANA"
+text = "WINDOWED"
 icon_align = 1
 
 [node name="MusicVolumeContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
@@ -89,13 +89,13 @@ margin_bottom = 84.0
 
 [node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MusicVolumeContainer"]
 margin_top = 3.0
-margin_right = 99.0
+margin_right = 96.0
 margin_bottom = 19.0
-text = "Musica            "
+text = "Music             "
 
 [node name="RangeControl" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MusicVolumeContainer" instance=ExtResource( 4 )]
-margin_left = 133.0
-margin_right = 205.0
+margin_left = 131.0
+margin_right = 203.0
 
 [node name="SFXVolumeContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 margin_top = 96.0
@@ -117,4 +117,4 @@ margin_left = 65.0
 margin_top = 130.0
 margin_right = 170.0
 margin_bottom = 152.0
-text = "Volver"
+text = "Back"

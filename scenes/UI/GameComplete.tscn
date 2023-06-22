@@ -63,14 +63,14 @@ custom_constants/separation = 6
 [node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 margin_right = 122.0
 margin_bottom = 16.0
-text = "JUEGO COMPLETADO!"
+text = "GAME COMPLETED!"
 align = 1
 
 [node name="Label2" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 margin_top = 22.0
 margin_right = 122.0
 margin_bottom = 38.0
-text = "Gracias por jugar!"
+text = "Thanks for playing!"
 align = 1
 autowrap = true
 
@@ -79,4 +79,4 @@ margin_left = 8.0
 margin_top = 44.0
 margin_right = 113.0
 margin_bottom = 66.0
-text = "Volver al menu"
+text = "Back to menu"

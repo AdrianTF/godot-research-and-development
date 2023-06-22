@@ -145,16 +145,16 @@ position = Vector2( 408, 64 )
 
 [node name="TutorialSign" parent="Tutorials" index="0" instance=ExtResource( 13 )]
 position = Vector2( -48, 64 )
-text = "Bienvenido a Final Quest.
-Utiliza A y D para moverte."
+text = "Welcome to Final Quest!
+ Use A and D to move."
 
 [node name="TutorialSign2" parent="Tutorials" index="1" instance=ExtResource( 13 )]
 position = Vector2( 56, 64 )
-text = "Pulsa ESPACIO para saltar."
+text = "Press SPACEBAR to jump."
 
 [node name="TutorialSign3" parent="Tutorials" index="2" instance=ExtResource( 13 )]
 position = Vector2( 336, 0 )
-text = "Manten pulsado ESPACIO para saltar mas lejos."
+text = "Hold SPACEBAR to jump higher."
 
 [node name="PlayerRoot" parent="." index="13"]
 position = Vector2( -64, 64 )

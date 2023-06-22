@@ -62,7 +62,7 @@ size_flags_vertical = 4
 [node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 margin_right = 122.0
 margin_bottom = 16.0
-text = "Nivel completado"
+text = "Level completed"
 align = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
@@ -72,15 +72,15 @@ margin_bottom = 36.0
 alignment = 1
 
 [node name="CoinsCollectedLabel" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
-margin_left = 4.0
-margin_right = 62.0
+margin_left = 14.0
+margin_right = 52.0
 margin_bottom = 16.0
-text = "Monedas: "
+text = "Coins: "
 
 [node name="CoinCounter" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 3 )]
-margin_left = 66.0
+margin_left = 56.0
 margin_top = 0.0
-margin_right = 117.0
+margin_right = 107.0
 margin_bottom = 16.0
 size_flags_horizontal = 4
 
@@ -95,11 +95,11 @@ margin_left = 8.0
 margin_top = 52.0
 margin_right = 113.0
 margin_bottom = 74.0
-text = "Siguiente nivel"
+text = "Next level"
 
 [node name="RestartButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource( 4 )]
 margin_left = 8.0
 margin_top = 78.0
 margin_right = 113.0
 margin_bottom = 100.0
-text = "Reiniciar"
+text = "Restart level"
