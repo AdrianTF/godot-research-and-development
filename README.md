@@ -3,7 +3,6 @@
 Final Quest is a unique project that combines a captivating 2D platformer with an in-depth research guide for the Godot game engine, as well as the structure of a workshop to be taught in a complementary way. This repository contains the complete source code and documentation for the project, which was developed as the final project for Multiplatform App Development Vocational Training studies.
 
 ## Features
----
 - Engaging 2D platformer gameplay with challenging levels and hazardous obstacles.
 - Unique movement mechanics including jumps, double jumps, and dashes.
 - Step-by-step development and research guide for Godot game engine.
@@ -11,7 +10,6 @@ Final Quest is a unique project that combines a captivating 2D platformer with a
 - Workshop designed to be accessible for anyone with prior knowledge of Godot.
 
 ## Getting started
----
 #### Installation
 1. Clone the repository (```git clone https://github.com/AdrianTF/Proyecto-final```)
 2. Open the project in Godot Engine.
@@ -22,7 +20,6 @@ You can download the full project documentation from [here](https://anvilproject
 
 You can also find the game executable and documentation on my [itch.io](https://less96.itch.io/final-quest-godot) page.
 ## Usage
----
 Play the game:
 - Use arrow keys or WASD for movement.
 - Press Spacebar to jump.
@@ -36,7 +33,6 @@ Modify and expand the project:
 - Customize levels, add new mechanics, or create your own game based on the provided codebase.
 
 ## Contributions
----
 Contributions are welcome! If you would like to make any improvements or add new features to the project, please follow these steps:
 
 1. Fork the repository.
@@ -45,11 +41,9 @@ Contributions are welcome! If you would like to make any improvements or add new
 4. Open a pull request describing your changes.
 
 # Credits
----
 [Adrián Touriño Franco]: Project lead, game design, investigator and programmer.
 
 # License
----
 Copyright 2023 Adrián Touriño Franco
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -67,7 +61,6 @@ limitations under the License.
 For any questions or inquiries, please contact adrian_tf96@hotmail.com.
 
 ## Acknowledgments
----
 This project was developed using the Godot game engine. Visit their official website at godotengine.org.
 
 Most of the assets used in the project can be found [here].
