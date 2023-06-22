@@ -61,7 +61,7 @@ limitations under the License.
 For any questions or inquiries, please contact adrian_tf96@hotmail.com.
 
 ## Acknowledgments
-This project was developed using the Godot game engine. Visit their official website at godotengine.org.
+This project was developed using the Godot game engine. Visit their official website at https://godotengine.org/.
 
 Most of the assets used in the project can be found [here].
 
